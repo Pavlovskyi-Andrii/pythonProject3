@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ task.task_name }}
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>{{ task.task_name }}</h1>
+
+    <div class="alert alert-info">
+
+        <p>{{ task.text_task }}</p>
+        <p><b>{{ task.date.date() }}</b></p>
+
+    </div>
+
+</div>
+{% endblock %}

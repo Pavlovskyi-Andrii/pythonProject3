@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+Усі контакти
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Всі контактні данні </h1>
+    {% for el in contact %}
+    <div class="alert alert-info">
+        <h2>{{ el.hireUsFormFirstName }}</h2>
+        <h2>{{ el.hireUsFormLasttName }}</h2>
+        <p>{{ el.hireUsFormWorkEmail }}</p>
+        <p>{{ el.hireUsFormPhone }}</p>
+        <p>{{ el.hireUsFormDetails }}</p>
+
+        <p><b>{{ el.date.date() }}</b></p>
+        <a href="/cont/{{ el.id }}" class="btn btn-warning">Детальніше</a>
+    </div>
+
+    {% endfor %}
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+Створити тест
+{% endblock %}
+
+{% block body %}
+
+
+<div class="container mt-5">
+    <h1> Пройти тест  Chat GPT: что это?</h1>
+        <h5> Chat GPT: что это?
+            Chat GPT – чат-бот на базе искусственного интеллекта, который способен общаться в режиме реального времени,
+            даже в виде спора, а также за считанные секунды выводить ошибки в коде и писать сценарии, стихи и текстовый контент.
+            Технологию представила компания OpenAI, одним из основателей которой был Илон Маск. Универсальный бот появился в ноябре 2022
+            года и сразу облетел весь мир. Его реализовывали при помощи суперкомпьютера Azure AI, а в качестве языковой модели использовали
+            технологию от OpenAI – GPT-3,5.
+        </h5>
+    <form method="post">
+        <div>Введіть ім'я </div>
+        <textarea name="task_name" id="task_name" class="form-control" placeholder="Им'я">Ведіть імя</textarea><br>
+        <div> Введіть відповідь </div>
+        <textarea name="text_task" id="text_task" class="form-control" placeholder="Відповідь">Відповідь</textarea><br>
+        <div> Введіть повну відповідь </div>
+        <textarea name="answer" id="answer" class="form-control" placeholder="Відповідь повна ">Введіть повну відповідь</textarea><br>
+        <input type="submit" class="btn btn-success" value="Надіслати">
+    </form>
+</div>
+{% endblock %}

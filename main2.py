@@ -1,0 +1,6 @@
+#...
+app.debug = True
+app.config['SECRET_KEY'] = 'a really really really really long secret key'
+
+manager = Manager(app)
+#...
