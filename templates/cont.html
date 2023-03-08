@@ -4,24 +4,47 @@
 Усі контакти
 {% endblock %}
 
+
+
 {% block body %}
-
 <div class="container mt-5">
-    <h1>Всі контактні данні </h1>
-    {% for el in contact %}
-    <div class="alert alert-info">
-        <h2>{{ el.hireUsFormFirstName }}</h2>
-        <h2>{{ el.hireUsFormLasttName }}</h2>
-        <p>{{ el.hireUsFormWorkEmail }}</p>
-        <p>{{ el.hireUsFormPhone }}</p>
-        <p>{{ el.hireUsFormDetails }}</p>
+    <h1>Усі контакти</h1>
 
-        <p><b>{{ el.date.date() }}</b></p>
-        <a href="/cont/{{ el.id }}" class="btn btn-warning">Детальніше</a>
-    </div>
 
-    {% endfor %}
+    {% if contact|length > 0 %}
+
+        {% for el in contact %}
+        <div class="alert alert-info">
+            <h5>{{ el.hireUsFormNameFirstName }}</h5>
+            <h5>{{ el.hireUsFormNameLastName }}</h5>
+            <h2>{{ el.title }}</h2>
+            <p>{{ el.intro }}</p>
+            <p><b>{{ el.date.date() }}</b></p>
+            <a href="/cont/{{ el.id }}" class="btn btn-warning">Детальніше</a>
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+    <p>Зараз нажаль статті недоступні для перегляду  </p>
+    {% endif %}
+
 </div>
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

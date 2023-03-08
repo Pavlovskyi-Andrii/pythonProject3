@@ -1,25 +1,30 @@
 {% extends "base.html" %}
 
 {% block title %}
-{{ content.hireUsFormFirstName }}
+{{ contact.hireUsFormNameFirstName }}
 {% endblock %}
 
+
+
 {% block body %}
-
 <div class="container mt-5">
-    <h1>{{ content.hireUsFormFirstName }}</h1>
+    <h1>{{ contact.hireUsFormNameFirstName }}</h1>
 
-    <div class="alert alert-info">
-        <p> Контактные данные </p>
-        <p>{{ content.hireUsFormLasttName }}</p>
-        <p>{{ content.hireUsFormWorkEmail }}</p>
-        <p>{{ content.hireUsFormPhone }}</p>
-        <p>{{ content.hireUsFormDetails }}</p>
-        <p><b>{{ content.date.date() }}</b></p>
 
-    </div>
+
+
+        <div class="alert alert-info">
+            <h5>{{ contact.hireUsFormNameFirstName }}</h5>
+            <h5>{{ contact.hireUsFormNameLastName }}</h5>
+            <h5>{{ contact.hireUsFormNameWorkEmail }}</h5>
+            <h5>{{ contact.hireUsFormNamePhone }}</h5>
+            <h5>{{ contact.hireUsFormNameDetails }}</h5>
+            <p><b>{{ contact.date.date() }}</b></p>
+
+        </div>
+
+    <p>Зараз нажаль статті недоступні для перегляду  </p>
 
 
 </div>
 {% endblock %}
-
